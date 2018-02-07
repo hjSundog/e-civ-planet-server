@@ -57,26 +57,26 @@ function makeTile (fileDir, z, x, y, cb) {
 	}
 	
 	// console.log('z,y,x,lonCenter,latCenter,mag', z, y, x, lonCenter, latCenter,mag)
-	var contours = '';
-	if (+z >= 3) {
-		contours = 10
-	}
-	if (+z >= 8) {
-		contours = 5
-	}
-	if (+z >= 12) {
-		contours = 3
-	}
-	if (+z >= 16) {
-		contours = 1
-	}
+	// var contours = '';
+	// if (+z >= 3) {
+	// 	contours = 10
+	// }
+	// if (+z >= 8) {
+	// 	contours = 5
+	// }
+	// if (+z >= 12) {
+	// 	contours = 3
+	// }
+	// if (+z >= 16) {
+	// 	contours = 1
+	// }
+	// 		-E${contours} \
 	var tileCommand = `./planet \
-		-T 0 25 -s .15465831 \
+		-T 0 25 -s .11501 \
 		-w 256 -h 256 -p m \
 		-i -0.044 -S \
 		-C ./Lefebvre2.col \
-		-E${contours} \
-		-c -c -c \
+		-c \
 		-m ${mag} \
 		-l ${lonCenter} \
 		-L ${latCenter } | convert - ${fileDir}${y}.png`
