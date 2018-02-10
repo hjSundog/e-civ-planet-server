@@ -528,7 +528,7 @@ char **av;
   if (view == 'c') {
     if (lat == 0) view = 'm';
 	/* Conical approaches mercator when lat -> 0 */
-    if (abs(lat) >= PI - 0.000001) view = 's';
+    if (fabs(lat) >= PI - 0.000001) view = 's';
 	/* Conical approaches stereo when lat -> +/- 90 */
   }
 
@@ -2165,7 +2165,7 @@ void print_error(char *filename, char *ext)
 /*    O : strong preference for land (value=4)		       */
 /*    @ : very strong preference for land (value=8)	       */
 /*							       */
-/* Each point on the map corresponds to a point on a 15° grid. */
+/* Each point on the map corresponds to a point on a 15ï¿½ grid. */
 /*							       */
 /* The program tries seeds starting from the specified and     */
 /* successively outputs the seed (and rotation) of the best    */
